@@ -46,20 +46,23 @@ public class Main {
     }
 
     private static String getId(String id) {
-        String replace = id.replace(".", "");
-        return replace.replace("E7", "").trim();
+        String replace1 = id.replace(".", "");
+        String replace2 = replace1.replace("E7", "");
+        return replace2.trim();
     }
 
     private static String getFirstName(String firstName) {
         String replace1 = firstName.replace("?", "");
         String replace2 = replace1.replace("\n", "");
-        return replace2.replace("❤️", "").trim();
+        String replace3 = replace2.replace("❤️", "");
+        return replace3.trim();
     }
 
     private static String getLastName(String lastName) {
         String replace1 = lastName.replace("?", "").trim();
         String replace2 = replace1.replace("\n", "");
-        return replace2.replace("❤️", "").trim();
+        String replace3 = replace2.replace("❤️", "");
+        return replace3.trim();
     }
 
     public static String toJSON(List<String> list) {
